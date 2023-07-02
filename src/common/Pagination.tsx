@@ -37,6 +37,7 @@ function Pagination({
           className="flex items-center mr-10 bg-indigo-500 text-white justify-end w-max"
         >
           <option value="">Items on page</option>
+          <option value="5">5</option>
           <option value="10">10</option>
           <option value="15">15</option>
         </select>
