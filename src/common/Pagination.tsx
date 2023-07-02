@@ -23,7 +23,9 @@ function Pagination({
         <button
           onClick={handleChangePageNext}
           className={`mr-2 cursor-not-allowed bg-indigo-500 text-white p-3 rounded ${
-            totalPages === page ? "opacity-25" : "cursor-pointer"
+            totalPages === page || totalPages < page
+              ? "opacity-25"
+              : "cursor-pointer"
           }`}
         >
           Next

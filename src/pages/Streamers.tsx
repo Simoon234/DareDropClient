@@ -14,7 +14,7 @@ import { UpdateVoteI, VoteType } from "../types/types";
 export default function Streamers() {
   const [openForm, setOpenForm] = useState<boolean>(false);
   const [itemsOnPage, setItemsOnPage] = useState<string>(
-    localStorage.getItem("itemsOnPage")! || "5"
+    localStorage.getItem("itemsOnPage")! || "1"
   );
   const [page, setPage] = useState<number>(1);
   const queryClient = useQueryClient();
@@ -28,7 +28,7 @@ export default function Streamers() {
 
   const handleChangePageNext = () => {
     if (data) {
-      if (data.totalPages === page) return;
+      if (data.totalPages === page || data.totalPages === 0) return;
     }
     setPage((prev) => prev + 1);
   };
