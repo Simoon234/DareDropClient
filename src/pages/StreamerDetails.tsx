@@ -5,7 +5,7 @@ const StreamerDetails = () => {
   const streamer = useLoaderData() as StreamerDetailsI;
 
   return (
-    <div className="h-[400px] max-w-[600px] m-auto flex flex-col items-center justify-center mt-10">
+    <div className="md:h-[400px] h-full  max-w-[600px] m-auto flex flex-col items-center justify-center mt-10">
       <img src={streamer.image} alt="streamer image" className="rounded" />
       <div className="mt-5 text-center w-full text-white">
         <h2 className="text-4xl font-bold break-words">

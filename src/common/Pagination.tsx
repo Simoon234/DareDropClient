@@ -8,13 +8,13 @@ function Pagination({
   page,
 }: PaginationI) {
   return (
-    <div className="flex items-center justify-between p-2">
-      <div className="relative">
+    <div className="flex md:flex-row flex-col items-center justify-between p-2">
+      <div className="relative flex md:w-20 w-full">
         <button
           disabled={page <= 1}
           aria-label="prev"
           onClick={handleChangePagePrev}
-          className={`mr-2 cursor-not-allowed bg-indigo-500 text-white p-3 rounded ${
+          className={`mr-2 md:mb-0 mb-2 w-full cursor-not-allowed bg-indigo-500 text-white p-3 rounded ${
             page <= 1 ? "opacity-25" : "cursor-pointer"
           }`}
         >
@@ -22,7 +22,7 @@ function Pagination({
         </button>
         <button
           onClick={handleChangePageNext}
-          className={`mr-2 cursor-not-allowed bg-indigo-500 text-white p-3 rounded ${
+          className={`mr-2 md:mb-0 mb-2 w-full cursor-not-allowed bg-indigo-500 text-white p-3 rounded ${
             totalPages === page || totalPages < page
               ? "opacity-25"
               : "cursor-pointer"

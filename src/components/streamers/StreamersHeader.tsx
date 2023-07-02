@@ -7,14 +7,14 @@ const StreamersHeader = ({
   isLoading,
 }: StreamerHeaderI) => {
   return (
-    <div className="flex py-10 justify-between items-center w-full">
+    <div className="flex md:flex-row flex-col py-10 justify-between items-center w-full">
       <div className="flex items-center">
-        <p className="text-white font-bold mr-2">
+        <p className="text-white md:mt-0 mb-4 font-bold mr-2">
           List of all favourites streamers
         </p>
         <span
           data-testid="quantity"
-          className="text-xl text-white font-bold flex items-center underline underline-offset-8"
+          className="text-xl md:mt-0 mb-4 text-white font-bold flex items-center underline underline-offset-8"
         >
           [ {isLoading ? <BeatLoader size={10} color="white" /> : streamers} ]
         </span>
